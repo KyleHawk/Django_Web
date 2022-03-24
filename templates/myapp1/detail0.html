@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if type_list %}
+        <h2>The type {{ type_no }} :</h2>
+        <ol>
+                {% for type in type_list %}
+                    <p>{{ type }}</p>
+                {% endfor %}
+        </ol>
+    {% else %}
+        <strong> None of the types is available! </strong>
+
+    {% endif %}
+</body>
+</html>
