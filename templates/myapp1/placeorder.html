@@ -1,0 +1,28 @@
+{% extends 'myapp1/base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp1/style.css' %}"/>
+    <meta charset="UTF-8">
+    <title>Place Order</title>
+</head>
+{% block body_block %}
+<body class="body">
+    <h1 class="h1">Items:</h1>
+    {% if itemlist %}
+        <ol>
+        {% for item in itemlist %}
+            <li>{{ item }}: ${{ item.price }}</li>
+        {% endfor%}
+        </ol>
+    {% endif %}
+    <h1 >{{ msg }}</h1>
+        <form action = "{% url 'myapp1:placeorder' %}" method="post">
+        {% csrf_token %}
+            <table>{{ form.as_table}}</table>
+            <input type="submit" value="Order Here">
+        </form>
+</body>
+{% endblock %}
+</html>

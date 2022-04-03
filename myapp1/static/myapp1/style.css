@@ -1,0 +1,22 @@
+.body{
+    background-color: lightyellow;
+    color: darkgreen;
+}
+
+.font{
+    font-size: 32px;
+    font_style: italic;
+    color: blue;
+}
+
+.h1{
+    position: relative;
+    color: blue;
+}
+
+.hbar1 {
+    display: inline;
+    margin: 15px;
+}
+
+

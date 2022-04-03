@@ -1,0 +1,15 @@
+{% extends 'myapp1/base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp1/style.css' %}"/>
+    <meta charset="UTF-8">
+    <title>order_response</title>
+</head>
+{% block body_block %}
+<body>
+    <h1>{{ msg }}</h1>
+</body>
+{% endblock %}
+</html>

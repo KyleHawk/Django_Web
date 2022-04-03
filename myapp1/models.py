@@ -7,6 +7,8 @@ class Type(models.Model):
     name = models.CharField(max_length=200)
     def __str__(self):
         return 'Type name : ' + self.name
+
+
 class Item(models.Model):
     type = models.ForeignKey(Type, related_name='items',on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
@@ -14,8 +16,15 @@ class Item(models.Model):
     stock = models.PositiveIntegerField(default=100)
     available = models.BooleanField(default=True)
     description = models.CharField(max_length=200,default=True)
+    interested = models.PositiveIntegerField(default=0)
     def __str__(self):
         return 'Item name : ' + self.name
+    def topup(self):
+        self.stock += 200
+
+
+
+
 class Client(User):
     CITY_CHOICES = [
         ('WD','Windsor'),
@@ -28,6 +37,8 @@ class Client(User):
     phone_number = models.IntegerField(null=True)
     def __str__(self):
         return 'Client name : ' + self.first_name + ' ' + self.last_name
+
+
 class OrderItem(models.Model):
     item = models.ForeignKey(Item,related_name='item',on_delete=models.CASCADE)
     client = models.ForeignKey(Client,related_name='client',on_delete=models.CASCADE)

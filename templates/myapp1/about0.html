@@ -1,12 +1,16 @@
-<li><a href="{% url 'myapp1:index' %}">Index Page</a></li>
-<li><a href="/">Index Page</a></li>
+{% extends 'myapp1/base.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>About</title>
 </head>
+{% block body_block %}
 <body>
-    <h1>This is an Online Grocery Store</h1>
+<h1>About Page</h1>
+<p>This is online grocery store</p>
+{#<p><a href="{% url 'myapp1:index' %}">Index Page {Url Namespacing}</a></p>#}
+{#<p><a href="/">Index Page {Hardcode}</a></p>#}
 </body>
+{% endblock %}
 </html>

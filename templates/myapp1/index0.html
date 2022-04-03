@@ -1,21 +1,23 @@
-<p><a href="{% url 'myapp1:about' %}">About Page</a></p>
+{% extends 'myapp1/base.html' %}
 <!DOCTYPE html>
-<html>
-<head lang="en">
-<meta charset="UTF-8">
-<title> Online Grocery Store </title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Grocery Store</title>
 </head>
-
+{% block body_block %}
 <body>
     {% if type_list %}
-        <h2> List of Types </h2>
-            <ol>
-	                {% for type in type_list %}
-                    <li> {{ type.name}} </li>
-                    {% endfor %}
-            </ol>
+        <h2>List of Types</h2>
+        <ol>
+            {% for type in type_list %}
+                <li><a href="{% url 'myapp1:detail' type.id%}">{{type.name}}</a></li>
+            {% endfor %}
+        </ol>
     {% else %}
-        <strong> None of the types is available! </strong>
+        <strong>None of the types is available</strong>
     {% endif %}
+{#    <p><a href="{% url 'myapp1:about' %}">About Page</a></p>#}
 </body>
+{% endblock %}
 </html>

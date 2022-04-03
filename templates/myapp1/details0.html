@@ -1,0 +1,27 @@
+{% extends 'myapp1/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+{% block body_block %}
+<body>
+    {% if tp %}
+        <h2>{{tp}}</h2>
+        {% if items %}
+        <ol>
+            {% for item in items %}
+                <li>{{item}}</li>
+            {% endfor %}
+        </ol>
+        {% else %}
+          <strong>No item present for this type</strong>
+        {% endif %}
+    {% else %}
+        <strong>Type not present</strong>
+    {% endif %}
+{#    <p><a href="{% url 'myapp1:index' %}">Index Page</a></p>#}
+</body>
+{% endblock %}
+</html>

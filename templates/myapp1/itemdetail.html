@@ -1,0 +1,21 @@
+{% extends 'myapp1/base.html' %}
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp1/style.css' %}"/>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body class="body">
+<h1>{% block myhdg %}{{ item.name }}{% endblock %}</h1>
+{% block body_block %}
+    <h2>Interested people: {{ item.interested }}</h2>
+    <form action = "{% url 'myapp1:itemdetail' item_id %}" method="post">
+    {% csrf_token %}
+            <table>{{ form.as_table}}</table>
+            <input type="submit" value="Submit">
+    </form>
+{% endblock %}
+</body>
+</html>

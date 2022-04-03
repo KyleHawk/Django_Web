@@ -1,0 +1,20 @@
+{% extends 'myapp1/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>items</title>
+</head>
+{% block body_block %}
+<body>
+    <h1 class="h1">Items:</h1>
+    {% if itemlist %}
+        <ol>
+        {% for item in itemlist %}
+            <li><a href="{% url 'myapp1:itemdetail' item.id %}"> {{ item }}: ${{ item.price }}</a></li>
+        {% endfor%}
+        </ol>
+    {% endif %}
+</body>
+{% endblock %}
+</html>
