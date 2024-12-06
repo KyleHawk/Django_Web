@@ -2,8 +2,9 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: my-dash-app
-  description: 这是一个私有的 Dash 应用
+  description: a dash app
   annotations:
+    backstage.io/techdocs-ref: url:https://fv-eta-processes-app-tst.azurewebsites.net/
     backstage.io/view-url: https://fv-eta-processes-app-tst.azurewebsites.net/
 spec:
   type: website
