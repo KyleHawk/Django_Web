@@ -6,10 +6,10 @@ metadata:
   tags:
     - website
     - frontend
-spec:
-  type: website
-  owner: team-web
-  lifecycle: production
   links:
     - url: https://fv-eta-processes-app-tst.azurewebsites.net/
       title: Visit Website
+spec:
+  type: website
+  lifecycle: production
+  owner: data-team
