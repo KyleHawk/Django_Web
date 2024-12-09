@@ -1,0 +1,3 @@
+site_name: My Dash App Documentation
+nav:
+  - Home: README.md
