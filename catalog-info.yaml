@@ -1,14 +1,12 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: website-frontend
-  description: Frontend for the company website
+  name: my-dash-app
+  description: a dash app
   tags:
     - website
-    - frontend
-  links:
-    - url: https://fv-eta-processes-app-tst.azurewebsites.net/
-      title: Visit Website
+  annotations:
+    backstage.io/view-url: https://fv-eta-processes-app-tst.azurewebsites.net/
 spec:
   type: website
   lifecycle: production
