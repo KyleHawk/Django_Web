@@ -14,4 +14,4 @@ metadata:
 spec:
   type: website
   lifecycle: production
-  owner: data-team
+  owner: guests
