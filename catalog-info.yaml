@@ -5,6 +5,10 @@ metadata:
   description: a dash app
   tags:
     - website
+  links:
+    - url: https://fv-eta-processes-app-tst.azurewebsites.net/
+      title: My Dashboard
+      icon: dashboard
   annotations:
     backstage.io/view-url: https://fv-eta-processes-app-tst.azurewebsites.net/
 spec:
