@@ -1,12 +1,15 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: my-dash-app
-  description: a dash app
-  annotations:
-    roadiehq.io/iframe-url: https://fv-eta-processes-app-tst.azurewebsites.net/
-    backstage.io/view-url: https://fv-eta-processes-app-tst.azurewebsites.net/
+  name: website-frontend
+  description: Frontend for the company website
+  tags:
+    - website
+    - frontend
 spec:
   type: website
+  owner: team-web
   lifecycle: production
-  owner: data-team
+  links:
+    - url: https://fv-eta-processes-app-tst.azurewebsites.net/
+      title: Visit Website
