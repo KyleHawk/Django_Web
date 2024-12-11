@@ -1,6 +1,6 @@
 site_name: 'example-docs'
 
-docs_dir: './'
+docs_dir: '../'
 nav:
   - Home: README.md
 
