@@ -2,7 +2,8 @@ name: Publish TechDocs Site
 
 on:
   push:
-    branches: [main]
+    branches:
+      - master
     # You can even set it to run only when TechDocs related files are updated.
     # paths:
     #   - "docs/**"
