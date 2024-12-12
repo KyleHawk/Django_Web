@@ -12,9 +12,7 @@ metadata:
   annotations:
     backstage.io/view-url: https://fv-eta-processes-app-tst.azurewebsites.net/
     backstage.io/techdocs-ref: dir:.
-    github.com/project-slug: KyleHawk/Django_Web
-    backstage.io/managed-by-location: url:https://github.com/KyleHawk/Django_Web
-    cicd.backstage.io/github-actions: enabled
+    circleci.com/project-slug: KyleHawk/Django_Web
 spec:
   type: website
   lifecycle: production
