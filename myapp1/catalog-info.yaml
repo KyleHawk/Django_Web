@@ -6,7 +6,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: KyleHawk
+  owner: guests
   definition: >
     openapi: "3.0.0"
     info:
