@@ -17,6 +17,5 @@ spec:
   type: website
   lifecycle: production
   owner: guests
-relations:
-  - type: consumes
-    targetRef: api:default/example-api
+  providesApis:
+      - example-api
