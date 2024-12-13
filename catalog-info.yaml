@@ -19,4 +19,4 @@ spec:
   owner: guests
 relations:
   - type: consumes
-    targetRef: api:example-grpc-api
+    targetRef: api:example-api

@@ -6,7 +6,7 @@ metadata:
 spec:
   type: openapi
   lifecycle: production
-  owner: team-a
+  owner: KyleHawk
   definition: >
     openapi: "3.0.0"
     info:
