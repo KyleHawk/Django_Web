@@ -9,6 +9,9 @@ metadata:
     - url: https://fv-eta-processes-app-tst.azurewebsites.net/
       title: My Dashboard
       icon: dashboard
+    - url: https://fv-eta-processes-app-tst.azurewebsites.net/
+      title: My Dashboard
+      icon: dashboard
   annotations:
     backstage.io/view-url: https://fv-eta-processes-app-tst.azurewebsites.net/
     backstage.io/techdocs-ref: dir:.
